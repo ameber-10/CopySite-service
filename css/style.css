@@ -1,0 +1,172 @@
+/* ------------------------------ */
+/*        headerのスタイル　　　　　  */
+/* ------------------------------ */
+
+header {
+    display: flex; /*headerの中のh1タグとnavタグを横並びにする*/
+    justify-content: space-between; /*両サイドに寄せる*/
+    height: 70px; /*高さを70pxにする*/
+    align-items: center; /*文字を中央に持ってくる*/
+    padding: 0 35px; /*上下0、左右に35pxのpaddingをつける*/
+    background-color: #000000; /*背景を黒にする(今回高さが分かりやすいように黒にした)*/
+    color: #ffffff; /*文字の色を白にする*/
+    position: fixed; /*スクロールした時に固定する(今回は分かりづらいです)*/
+    z-index: 2; /*上に表示させるようにする*/
+    width: 100%; /*画面幅いっぱいにする*/
+}
+header h1 {
+    font-size: 1.4em; /*フォントの大きさを指定(pxでも可)*/
+}
+#nav ul {
+    display: flex; /*文字の横並び */
+}
+#nav li {
+    font-weight: bold; /*フォントを太くする*/
+    margin-left: 35px; /*左にmarginをつける*/
+}
+
+
+/* ------------------------------ */
+/*   　　トップセクションのスタイル　　　　*/
+/* ------------------------------ */
+
+.topsection {
+    background-image: url(../img/view.jpg); /*背景画像を指定する*/
+    height: 100vh; /*高さを画面と合わせる*/
+    background-size: cover; /*背景領域を完全に覆う最小サイズにする*/
+    background-position: 50%; /*中央に持ってくる*/
+    position: relative; /*changing-wrapの親要素に指定する*/
+}
+.reproduction-wrap {
+    position: absolute; /*changing-wrapの子要素に指定する*/
+    top: 50%; /*top,left,transformの3点セットで中央に配置する*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.reproduction {
+    font-size: 2em; /*フォントの大きさを指定する*/
+    color: rgb(248, 129, 60); /*文字の色を指定する*/
+    font-weight: bold; /*フォントを太くする*/
+}
+.topsection hr {
+    height: 2.5px; /*線の太さを指定する*/
+    background-color: rgb(248, 129, 60); /*色を指定する*/
+    width: 45%; /*長さを指定する*/
+    border: none; /*ボーダーをなくす*/
+    margin: 20px auto; /*上下に20px、autoで中央に寄せる*/
+}
+.entry {
+    margin-top: 150px; /*上にmarginを入れる*/
+    background: linear-gradient(to right, #283C86, #06BEB6); /*グラデーションをつける*/
+    box-shadow: 0 5px #000000; /*影をつける*/
+    text-align: center; /*文字を中央寄せする*/
+    border-radius: 5px; /*角を丸くする*/
+    padding: 15px 0; /*上下にpaddingを15px、左右を0にする*/
+}
+.entry a {
+    color: #ffffff; /*色を指定する*/
+}
+
+
+/* ------------------------------ */
+/*      Aboutのスタイル　　　　　  */
+/* ------------------------------ */
+
+#about {
+    background-color: #F8F8F8; /*背景画像を指定する*/
+    height: 931px; /*高さを指定する*/
+}
+#about .title {
+    display: flex; /*後のtitle前後のcontentを表示させる*/
+    justify-content: center; /*中央寄せをする*/
+    padding-top: 90px; /*上にpaddingを指定する*/
+    font-weight: bold; /*文字を太くする*/
+    font-style: oblique; /*文字を斜体にする*/
+    font-size: 18px; /*フォントサイズを指定する*/
+}
+#about .title:before, 
+#about .title:after {
+    content: ""; /*内容を挿入する*/
+    width: 40px; /*幅を指定する*/
+    height: 1px; /*高さを指定する*/
+    background: #000; /*色を指定する*/
+    margin: 15px; /*marginを指定する*/
+}
+.about-wrap {
+    display: flex; /*横並びにする*/
+    width: 80%; /*幅を指定する*/
+    margin: 60px auto; /*marginを上下に60px、左右均等にする*/
+    justify-content: space-between; /*等間隔に並べる*/
+    flex-wrap: wrap; /*折り返し方法を指定する*/ /* https://developer.mozilla.org/ja/docs/Web/CSS/flex-wrap */
+}                                            /*これを検索かけると分かりやすい*/
+.about-item {
+    background-color: #fff; /*背景を指定する*/
+    text-align: center; /*中央寄せする*/
+    width: 26%; /*幅を指定する*/
+    margin-bottom: 50px; /*marginを下に指定する*/
+}
+.about-item p:first-child {
+    padding: 10%; /*paddingを指定する*/
+    font-size: 22px; /*フォントサイズを指定する*/
+}
+.about-item img {
+    width: 45%; /*画像の大きさを指定する*/
+}
+.about-item p:last-child {
+    margin: 35px 50px; /*最後のPタグにmarginを上下35px、左右に50px指定する*/
+    font-size: 12px; /*フォントサイズを指定する*/
+    text-align: left; /*文字を左に寄せる*/
+}
+
+
+/* ------------------------------ */
+/*      Serviceのスタイル　　　　　  */
+/* ------------------------------ */
+
+#service {
+    background-image: url(../img/bg_service.jpg); /*背景を指定する*/
+    height: 100vh; /*高さを指定する*/
+    background-size: cover; /*背景領域を完全に覆う最小サイズにする*/
+    background-position: 50%; /*中央に持ってくる*/
+}
+#service .title {
+    display: flex; /*後のtitle前後のcontentを表示させる*/
+    justify-content: center; /*中央寄せをする*/
+    padding: 90px 0  60px 0; /*paddingを上に90px、右に0、下に60px、左に60px指定する*/
+    font-weight: bold; /*文字を太くする*/
+    font-style: oblique; /*文字を斜体にする*/
+    color: #fff; /*色を指定する*/
+}
+#service .title:before, 
+#service .title:after {
+    content: ""; /*内容を挿入する*/
+    width: 40px; /*幅を指定する*/
+    height: 1px; /*高さを指定する*/
+    background: #fff; /*色を指定する*/
+    margin: 13px; /*marginを指定する*/
+    /* align-items: center; */
+}
+.service-wrap {
+    display: flex; /*横並びにする*/
+    justify-content: space-between; /*等間隔に並べる*/
+    width: 70%; /*幅を指定する*/
+    margin: auto; /*marginをautoにする*/
+}
+.service-item {
+    width: 32%; /*幅を指定する*/
+    background-color: #fff; /*背景色を指定する*/
+}
+.service-item img {
+    width: 100%; /*幅を指定する*/
+    height: 220px; /*高さを指定する*/
+}
+.service-item h5 {
+    font-size: 20px; /*フォントサイズを指定する*/
+    margin: 30px 10px; /*上下に20px、左右に10px指定する*/
+}
+.service-item p {
+    color: #333333; /*色を指定する*/
+    line-height: 25px; /*行の高さを指定する*/
+    margin: 0 10px; /*上下に0、左右に10px指定する*/
+    padding-bottom: 50px; /*下にpaddingを指定する*/
+}
